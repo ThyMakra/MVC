@@ -12,10 +12,24 @@
     <title>Register Student</title>
 </head>
 <body>
-<form action="ValidateServlet" method="POST">
-    ID : <input type="text" name="id">
-    Name : <input type="text" name="name"/>
-    <input type="submit" value="Enter"/>
-</form>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign In </h2>
+        <h2 class="inactive underlineHover">Sign Up </h2>
+        
+        <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>
