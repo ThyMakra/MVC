@@ -18,11 +18,11 @@ public class ValidateServlet extends HttpServlet {
         boolean success = db.insertRecord(student);
         if (success) {
             req.setAttribute("student", student);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("user");
-            requestDispatcher.forward(req, resp);
         } else {
-            
+            System.out.println("Data insertion failed...");
         }
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("user");
+        requestDispatcher.forward(req, resp);
     }
 
     @Override
