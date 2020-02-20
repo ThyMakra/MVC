@@ -61,6 +61,22 @@ public class DBOperation {
         }
         return records_number;
     }
-    
-    
+
+    public boolean updateData(Student s){
+        boolean rowUpdated = false;
+        try{
+            String sql = "update students set id=?, firstName=? where id="+s.getId();
+            getCon();
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1,s.getId());
+            ps.setString(2,s.getFirstName());
+            ps.close();
+            con.close();
+
+            rowUpdated = ps.executeUpdate()>0;
+        }
+        catch (SQLException | ClassNotFoundException e){}
+        return rowUpdated;
+    }
 }
