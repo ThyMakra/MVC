@@ -4,9 +4,17 @@
         <servlet-name>ValidateServlet</servlet-name>
         <servlet-class>ValidateServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>insertRecordServlet</servlet-name>
+        <servlet-class>insertRecordServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateServlet</servlet-name>
         <url-pattern>/ValidateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>insertRecordServlet</servlet-name>
+        <url-pattern>/insertRecordServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -14,6 +22,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>insertRecordJSP.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
