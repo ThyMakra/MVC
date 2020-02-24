@@ -85,4 +85,18 @@ public class DBOperation {
         ResultSet rs =  st.executeQuery("select * from student");
         return rs;
     }
+    public boolean checkUser(String user, String pass){
+        boolean st = false;
+        try{
+            getCon();
+            PreparedStatement ps = con.prepareStatement("select * from register where username=? and password=?");
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            ResultSet rs = ps.executeQuery();
+            st = rs.next();
+        } catch (ClassNotFoundException | SQLException e){
+            System.out.println(e);
+        }
+        return st;
+    }
 }
