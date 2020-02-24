@@ -1,10 +1,14 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;import java.util.List;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.*;
 
 public class DBOperation {
+    Connection con;
     Connection connection;
     
     DBOperation() {   
@@ -26,8 +30,7 @@ public class DBOperation {
         try {
             getConnection(); // establish the connection
             // insert DAO to the table
-            PreparedStatement prepareStatement = connection.prepareStatement(
-                    "insert into student values(?, ?)");
+            PreparedStatement prepareStatement = connection.prepareStatement("insert into student values(?, ?)");
             prepareStatement.setInt(1, id);
             prepareStatement.setString(2, name);
             prepareStatement.execute();
@@ -37,7 +40,6 @@ public class DBOperation {
             return false;
         }
     }
-    
     public int insertRecords(ArrayList<Student> students) {
         int records_number = 0;
         int id;
@@ -45,8 +47,7 @@ public class DBOperation {
         try {
             getConnection(); // establish the connection
             // insert DAO to the table
-                PreparedStatement prepareStatement = connection.prepareStatement(
-                        "insert into student values(?, ?)");
+                PreparedStatement prepareStatement = connection.prepareStatement("insert into student values(?, ?)");
                 for (Student student : students) {
                     id = student.getId();
                     name = student.getName();
@@ -61,8 +62,29 @@ public class DBOperation {
         }
         return records_number;
     }
-
-    ArrayList<Student> viewAll() {
+public ArrayList<Student> viewAll(){
+        ArrayList<Student> studentList = new ArrayList<Student>();
+        String sql = "select * from student";
+        try{
+            getCon();
+            Statement statement = con.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                int sno = Integer.parseInt(resultSet.getString("sno"));
+                String firstName = resultSet.getString("firstName");
+                Student student = new Student(sno,firstName);
+                studentList.add(student);
+            }
+            resultSet.close();
+            statement.close();
+            con.close();
+            return studentList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return studentList;
+    }
+    private void getCon() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
