@@ -8,6 +8,14 @@
         <servlet-name>insertRecordServlet</servlet-name>
         <servlet-class>insertRecordServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>UpdateServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateServlet</servlet-name>
         <url-pattern>/ValidateServlet</url-pattern>
@@ -16,12 +24,20 @@
         <servlet-name>insertRecordServlet</servlet-name>
         <url-pattern>/insertRecordServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>insertRecordJSP.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

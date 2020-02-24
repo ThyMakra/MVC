@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 public class insertRecordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException{
         try {
-            int id = Integer.parseInt(request.getParameter("id"));
-            String sname = request.getParameter("sname");
+            int id = Integer.parseInt(request.getParameter("idInsert"));
+            String sname = request.getParameter("nameInsert");
             
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/classdb";
