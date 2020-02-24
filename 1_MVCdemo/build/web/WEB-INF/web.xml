@@ -4,9 +4,25 @@
         <servlet-name>ValidateServlet</servlet-name>
         <servlet-class>ValidateServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewAll</servlet-name>
+        <servlet-class>ViewAll</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAllServlet</servlet-name>
+        <servlet-class>ViewAllServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateServlet</servlet-name>
         <url-pattern>/ValidateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAll</servlet-name>
+        <url-pattern>/ViewAll</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAllServlet</servlet-name>
+        <url-pattern>/ViewAllServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

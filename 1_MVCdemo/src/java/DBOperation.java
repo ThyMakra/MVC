@@ -2,7 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.ArrayList;import java.util.List;
 
 public class DBOperation {
     Connection connection;
@@ -61,6 +61,8 @@ public class DBOperation {
         }
         return records_number;
     }
-    
-    
+
+    ArrayList<Student> viewAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
