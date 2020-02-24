@@ -5,7 +5,7 @@
     <div class="content fifth-content">
         <div class="container-fluid">
             <div class="col-md-6">
-                <div id="map">
+       newjsp         <div id="map">
                 <!-- How to change your own map point
                     1. Go to Google Maps
                     2. Click on your location point

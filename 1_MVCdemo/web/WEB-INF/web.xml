@@ -16,6 +16,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>template/login_sreysa.jsp</welcome-file>
+        <welcome-file>template/view_both.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
