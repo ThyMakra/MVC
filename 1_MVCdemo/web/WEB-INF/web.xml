@@ -18,6 +18,10 @@
         <servlet-name>ViewAllServlet</servlet-name>
         <servlet-class>ViewAllServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>DeleteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateServlet</servlet-name>
         <url-pattern>/ValidateServlet</url-pattern>
@@ -25,6 +29,10 @@
     <servlet-mapping>
         <servlet-name>ViewAllServlet</servlet-name>
         <url-pattern>/ViewAllServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

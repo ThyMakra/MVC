@@ -5,16 +5,15 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%--<%! ArrayList<String> my_students = new ArrayList(Arrays.asList("Makra", "Annie", "Nora")); %>--%>
-<%
-    
-%>
 <%! int count = 0; %>
 <c:set var="student_cards">
     <div class="carousel-inner">
+    <% 
+        ArrayList<student> students = null;
+        students = (ArrayList<student>)request.getAttribute("studentList");
+    %>
     <%
-        ArrayList<student> students = (ArrayList<student>)request.getAttribute("studentList");
-        out.println("students");
+        
         for (student student : students) {
             
     %>
@@ -37,10 +36,14 @@
                 </div>
                 <div class="buttons" style="background-color: #1F1A36;">
                     <button class="student-card-button ghost">
-                        Update
+                        <a href="" style="color: white">
+                            Update
+                        </a>
                     </button>
                     <button class="student-card-button" style="background-color: #d92121;">
-                        Delete
+                        <a href="DeleteServlet?idDelete=<%= student.getId() %>" style="color: white">
+                            Delete
+                        </a>
                     </button>
                 </div>
             </div>
@@ -53,10 +56,16 @@
     </div>
 </c:set>
 <c:set var="indicators">
-    <% for (int i = 0; i < 3; i++) { %>
-    <li data-target="#carouselExampleIndicators" data-slide-to="<%= i %>" class="<% if (i == 0) { %>active<% } %>"></li>
+    <% 
+        ArrayList<student> new_students = null;
+        new_students = (ArrayList<student>)request.getAttribute("studentList");
+        for (int i = 0; i < new_students.size(); i++) { 
+    %>
+        <li data-target="#carouselExampleIndicators" data-slide-to="<%= i %>" class="<% if (i == 0) { %>active<% } %>"></li>
     <% } %>
 </c:set>
+        
+        
 <t:template>
     <jsp:body>
         

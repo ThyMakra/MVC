@@ -23,7 +23,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println(ex);
         }
-        System.out.println(students);
         request.setAttribute("studentList", students);
         RequestDispatcher rd = request.getRequestDispatcher("viewall.jsp");
         rd.forward(request,response);
