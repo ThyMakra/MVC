@@ -65,7 +65,6 @@
     <% } %>
 </c:set>
         
-        
 <t:template>
     <jsp:body>
         
