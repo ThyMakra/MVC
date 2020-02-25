@@ -15,7 +15,7 @@ public class viewServlet extends HttpServlet {
             student s = new student();
             String id = request.getParameter("idSelect");
             s.setId(id);
-            boolean success = dbo.ViewRecord(s); 
+            boolean success  dbo.ViewRecord(s);
             if (success){
                 RequestDispatcher rd = request.getRequestDispatcher("success.jsp");
                 rd.forward(request,response);
