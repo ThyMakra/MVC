@@ -1,20 +1,27 @@
+<%@page import="DBOperation.student"%>
 <%@page import="java.util.Arrays"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%! ArrayList<String> students = new ArrayList(Arrays.asList("Makra", "Annie", "Nora")); %>
+<%--<%! ArrayList<String> my_students = new ArrayList(Arrays.asList("Makra", "Annie", "Nora")); %>--%>
+<%
+    
+%>
 <%! int count = 0; %>
 <c:set var="student_cards">
     <div class="carousel-inner">
     <%
-        for (String student : students) {
+        ArrayList<student> students = (ArrayList<student>)request.getAttribute("studentList");
+        out.println("students");
+        for (student student : students) {
+            
     %>
         <div class="carousel-item<% if (count == 0) { %> active<% } %>">
             <div class="card-container">
                 <img src="static/img/author_image.png" alt="user"/>
-                <h3 class="student-name"><%= student %></h3>
+                <h3 class="student-name"><%= student.getName() %></h3>
                 <h6 class="student-id">ID: </h6>
 
                 <div class="student-information" style="height: 250px;background: black!important;"></div>
