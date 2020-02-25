@@ -69,11 +69,11 @@ public class DBOperation {
             getCon();
             Statement st = con.createStatement();
             student student = new student();
-//            String sql = String.format("select name from student where  id = '%s' ", student.getId());
-            String sql = String.format("select name from student where id = '1' ");
+            String sql = String.format("select * from student where  id = '%s' ", student.getId());
+//            String sql = String.format("select name from student where id = '1' ");
             rs = st.executeQuery(sql);
             while(rs.next()){
-                System.out.println(rs.getString(1));
+                System.out.println(rs.getString("id") + " : " + rs.getString("name"));
             }
         } catch(ClassNotFoundException | SQLException e){
             System.out.println(e);
