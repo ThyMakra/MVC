@@ -185,7 +185,7 @@ nav ul li i {
 }
 
 nav ul li a {
-	font-size: 18px;
+	width: 300px;
 }
 
 nav .mini-logo {
@@ -226,7 +226,7 @@ nav a, nav a:visited, nav a:active {
 }
 nav a {
 	text-decoration: none!important;
-	font-size: 14px;
+	font-size: 25px;
 	letter-spacing: 0.5px;
   	-webkit-transition: color 2s, background 1s;
   	transition: color 2s, background 1s;
@@ -250,12 +250,12 @@ nav a::before {
 }
 nav a:hover {
 	text-decoration: none;
-  -webkit-animation: fillColour 0.7s forwards ease-in-out;
-          animation: fillColour 0.7s forwards ease-in-out;
+  -webkit-animation: fillColour 0.5s forwards ease-in-out;
+          animation: fillColour 0.5s forwards ease-in-out;
 }
 nav a:hover::before {
-  -webkit-animation: fill 0.7s forwards ease-in-out;
-          animation: fill 0.7s forwards ease-in-out;
+  -webkit-animation: fill 0.5s forwards ease-in-out;
+          animation: fill 0.5s forwards ease-in-out;
   opacity: 1;
 }
 
@@ -675,8 +675,9 @@ nav a:hover::before {
 
 .fifth-content button {
 	max-width: 100%;
-	width: 100%;
-    display: inline-block;
+	/* width: 100%; */
+	margin: 30px 90px 0 90px;
+        display: inline-block;
 	border: 2px solid #fff;
 	padding: 8px 15px;
 	font-size: 13px;

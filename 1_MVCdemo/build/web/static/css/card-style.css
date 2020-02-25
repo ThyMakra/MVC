@@ -1,0 +1,92 @@
+/* * {
+	box-sizing: border-box;
+}
+ 
+body {
+	background-image: linear-gradient(to right top, #2d0036, #4f015b, #730283, #9a02ac, #C400D7);
+	font-family: Montserrat, sans-serif;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+ 
+	min-height: 100vh;
+	margin: 0;
+} */
+.student-card {
+    background-image: black!important;
+}
+ 
+h3.student-name {
+	margin: 10px 0;
+}
+ 
+h6.student-address {
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+ 
+p#student-description {
+	font-size: 14px;
+	line-height: 21px;
+}
+ 
+div.card-container{
+    background-color: #231E39;
+	border-radius: 25px;
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+	color: #B3B8CD;
+	padding: 30px 0 0;
+	position: relative;
+	max-width: 100%;
+	text-align: center;
+    overflow: hidden;
+    height: 800px!important;
+    width: 1000px!important;
+}
+ 
+.card-container img {
+	border: 1px solid #C400D7;
+	border-radius: 50%;
+	padding: 7px;
+	height: 150px;
+	width: 150px;
+}
+ 
+button.student-card-button {
+	background-color: #C400D7;
+	border: 1px solid #C400D7;
+	border-radius: 3px;
+	color: #fff;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+ 
+button.student-card-button.ghost {
+	background-color: transparent;
+	color: #C400D7;
+}
+ 
+.student-skills {
+	background-color: #1F1A36;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+ 
+.student-skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ 
+.student-skills ul li {
+	border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}

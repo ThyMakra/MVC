@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="static/css/fontAwesome.css">
         <link rel="stylesheet" href="static/css/light-box.css">
         <link rel="stylesheet" href="static/css/templatemo-main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
@@ -323,10 +324,9 @@
           </div>
         </div>
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="static/js/vendor/jquery-1.11.2.min.js"></script>
 
-    <script src="static/js/vendor/bootstrap.min.js"></script>
+    <script src="static/dist/js/bootstrap.js"></script>
     
     <script src="static/js/datepicker.js"></script>
     <script src="static/js/plugins.js"></script>
@@ -334,8 +334,6 @@
 
     <script type="text/javascript"> 
     $(document).ready(function() {
-
-        
 
         // navigation click actions 
         $('.scroll-link').on('click', function(event){
