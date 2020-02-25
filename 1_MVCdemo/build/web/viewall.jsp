@@ -5,7 +5,6 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%! int count = 0; %>
 <c:set var="student_cards">
     <div class="carousel-inner">
     <% 
@@ -13,7 +12,7 @@
         students = (ArrayList<student>)request.getAttribute("studentList");
     %>
     <%
-        
+        int count = 0;
         for (student student : students) {
             
     %>
