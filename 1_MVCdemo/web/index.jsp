@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Feb 18, 2020, 11:01:22 AM
+    Created on : Feb 25, 2020, 12:17:42 PM
     Author     : makra
 --%>
 
@@ -9,13 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register Student</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <form action="ValidateServlet" method="POST">
-            ID : <input type="text" name="id">
-            Name : <input type="text" name="name"/>
-            <input type="submit" value="Enter"/>
-        </form>
+        <a href="ViewAllServlet">View all</a>
     </body>
 </html>
