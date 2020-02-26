@@ -13,7 +13,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Moonlight CSS Website Template</title>
+        <title>The B Home Page</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,15 +41,14 @@
   
         <nav>
           <div class="logo">
-              <img src="static/img/logo.png" alt="">
+              <img src="static/img/forum_b.jpg" alt="" width="150px" height="150px">
           </div>
           <div class="mini-logo">
               <img src="static/img/mini_logo.png" alt="">
           </div>
           <ul>
             <li><a href="#1"><i class="fa fa-home"></i> <em>All Student Records</em></a></li>
-            <li><a href="#2"><i class="fa fa-user"></i> <em>See Student Profile</em></a></li>
-            <li><a href="#3"><i class="fa fa-pencil"></i> <em>Insert Student Info</em></a></li>
+            <li><a href="#2"><i class="fa fa-pencil"></i> <em>Insert Student Info</em></a></li>
           </ul>
         </nav>
         
@@ -60,82 +59,53 @@
             <jsp:doBody/>    
             
           </div>
-          <div class="slide" id="2">
-            <div class="content second-content">
-                <div class="container-fluid">
-                    <div class="col-md-6">
-                        <div class="left-content">
-                            <h2>About Us</h2>
-                            <p>Please tell your friends about templatemo website. A variety of free CSS templates are available for immediate downloads.</p> 
-                            <p>Phasellus vitae faucibus orci. Etiam eleifend orci sed faucibus semper. Cras varius dolor et augue fringilla, eu commodo sapien iaculis. Donec eget dictum tellus. <a href="#">Curabitur</a> a interdum diam. Nulla vestibulum porttitor porta.</p>
-                            <p>Nulla vitae interdum libero, vel posuere ipsum. Phasellus interdum est et dapibus tempus. Vestibulum malesuada lorem condimentum mauris ornare dapibus. Curabitur tempor ligula et <a href="#">placerat</a> molestie.</p>
-                            <p>Aliquam efficitur eu purus in interdum. <a href="#">Etiam tincidunt</a> magna ex, sit amet lobortis felis bibendum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                          <div class="main-btn"><a href="#3">Read More</a></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="right-image">
-                          
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="slide" id="3">
-            <div class="content third-content">
-                <div class="container-fluid">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="first-section">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
-                                                <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="right-image">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="second-section">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="right-content">
-                                                <h2>Maecenas eu purus eu sapien</h2>
-                                                <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
           
-          <div class="slide" id="5">
-            
+          <div class="slide" id="2">
+            <div class="content fifth-content">
+
+                <div style="margin-top: 150px">
+                    <div class="col-sm-1">
+                        <img src="static/img/forum_b.jpg" class="rounded-circle" style="margin-left: 600px">
+                    </div>
+                </div>
+
+                <div class="container-fluid" style="margin-left: 220px" style="margin-bottom: 300px">
+
+                    <form id="contact" action="InsertServlet" method="get" style="margin-top: 50px">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <fieldset>
+                                            <input name="nameInsert" type="text" class="form-control" id="name_Insert" placeholder="Your name..." required="">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div>
+                                        <fieldset>
+                                            <input name="idInsert" type="text" class="form-control" id="id_Insert" placeholder="Your ID..." required="">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn"> Insert </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
           </div>
         </div>
 
         <div class="footer">
           <div class="content">
-              <p>Copyright &copy; 2020 Company Name . Template: <a rel="nofollow" href="https://templatemo.com/tm-512-moonlight">Moonlight</a></p>
+              <p>Copyright &copy; 2020 The B Community .<a rel="nofollow" href="">Welcome to The B</a></p>
           </div>
         </div>
  

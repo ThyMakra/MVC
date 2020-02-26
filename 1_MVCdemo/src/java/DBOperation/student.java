@@ -22,7 +22,7 @@ package DBOperation;
 public class student {
     private String id;
     private String name;
-
+    public String profile_pic;
 
     public student(String id, String name){
         this.id = id;

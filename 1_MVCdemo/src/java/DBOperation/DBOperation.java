@@ -32,9 +32,10 @@ public class DBOperation {
         String name = student.getName();
         try {
             getCon();
-            PreparedStatement ps = con.prepareStatement("insert into student values (?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into student values (?,?,?)");
             ps.setString(1,id);
             ps.setString(2,name);
+            ps.setString(3, "default.jpg");
             ps.execute();
             return true;
         } catch (ClassNotFoundException | SQLException e){
@@ -61,7 +62,7 @@ public class DBOperation {
         try{
             getCon();
             Statement st = con.createStatement();
-            String sql = String.format("update student set name = '%s' where id = '%s';", name,id);
+            String sql = String.format("update student set sname = '%s' where id = '%s';", name, id);
             st.executeUpdate(sql);
             return true;
         } catch(ClassNotFoundException | SQLException e){
@@ -69,21 +70,28 @@ public class DBOperation {
         }
         return false;
     }
-    public void ViewRecord() throws SQLException{
+    public student ViewRecord(String id) throws SQLException{
         ResultSet rs;
+        student student = new student();
         try{
             getCon();
             Statement st = con.createStatement();
-            student student = new student();
-            String sql = String.format("select * from student where  id = '%s' ", student.getId());
+
+            String sql = String.format("select * from student where  id = '%s' ", id);
 //            String sql = String.format("select name from student where id = '1' ");
             rs = st.executeQuery(sql);
             while(rs.next()){
-                System.out.println(rs.getString("id") + " : " + rs.getString("name"));
+                student.setId(rs.getString("id"));
+                student.setName(rs.getString("sname"));
+                student.profile_pic = rs.getString("profile_pic");
+//                System.out.println(rs.getString("id") + " : " + rs.getString("sname"));
+                return student;
+                
             }
         } catch(ClassNotFoundException | SQLException e){
             System.out.println(e);
         }
+        return student;
     }
     public ArrayList<student> viewAllRecords() throws SQLException, ClassNotFoundException{
         ArrayList<student> studentList = new ArrayList<student>();
@@ -95,7 +103,9 @@ public class DBOperation {
             while(resultSet.next()){
                 String id = resultSet.getString("id");
                 String sname = resultSet.getString("sname");
+                String profile_pic = resultSet.getString("profile_pic");
                 student student = new student(id, sname);
+                student.profile_pic = profile_pic;
                 studentList.add(student);
             }
             resultSet.close();
@@ -121,4 +131,36 @@ public class DBOperation {
         }
         return st;
     }
+    
+    public boolean Signin(String user, String pass){
+        boolean st = false;
+        try{
+            getCon();
+            PreparedStatement ps = con.prepareStatement("select * from register where username=? and password=?");
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            ResultSet rs = ps.executeQuery();
+            st = rs.next();
+        } catch (ClassNotFoundException | SQLException e){
+            System.out.println(e);
+        }
+        return st;
+    }
+    
+    public boolean Signup(String user, String pass){
+        try{
+            getCon();
+            PreparedStatement ps = con.prepareStatement("insert into register values (?,?)");
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            System.out.println(user);
+            System.out.println(pass);
+            ps.execute();
+            return true;
+        } catch(ClassNotFoundException | SQLException e) {
+            System.out.println(e);
+        }
+        return false;
+    }
+    
 }

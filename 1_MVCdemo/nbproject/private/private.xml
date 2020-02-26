@@ -3,9 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/viewall.jsp</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/UpdateServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/WEB-INF/web.xml</file>
             <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/DeleteServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/static/css/pricing-table.css</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/static/css/templatemo-main.css</file>
             <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/ViewAllServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/loginServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/DBOperation/DBOperation.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/viewall.jsp</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/WEB-INF/tags/template.tag</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/DBOperation/student.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/InsertServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/src/java/ViewOneServlet.java</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/home.js</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/static/css/bootstrap4.4.1.css</file>
+            <file>file:/home/makra/Desktop/Files/Study/00_Session/Sem3/03_Java_Web_App/Unit4/MVC/1_MVCdemo/web/viewone.jsp</file>
         </group>
     </open-files>
 </project-private>

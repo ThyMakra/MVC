@@ -18,9 +18,9 @@
     %>
         <div class="carousel-item<% if (count == 0) { %> active<% } %>">
             <div class="card-container">
-                <img src="static/img/author_image.png" alt="user"/>
+                <img src="static/img/<%= student.profile_pic %>" alt="user"/>
                 <h3 class="student-name"><%= student.getName() %></h3>
-                <h6 class="student-id">ID: </h6>
+                <h6 class="student-id">ID: <%= student.getId() %></h6>
 
                 <div class="student-information" style="height: 250px;background: black!important;"></div>
                 <div class="student-skills"  style="background-color: #1F1A36;">
@@ -35,8 +35,8 @@
                 </div>
                 <div class="buttons" style="background-color: #1F1A36;">
                     <button class="student-card-button ghost">
-                        <a href="" style="color: white">
-                            Update
+                        <a href="ViewOneServlet?idView=<%= student.getId() %>" style="color: white">
+                            View
                         </a>
                     </button>
                     <button class="student-card-button" style="background-color: #d92121;">
